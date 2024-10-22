@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array sorting and mapping in JavaScript </title>
+</head>
+<body>
+<center>
+<h1>Ascending and Descending Order </h1>
+</center>
+<p>We are sorting numbers in Ascending and Descending</p>
+<button onclick="ascending()">Ascending Order</button>
+<button onclick="descending()">Descending Order</button>
+<P id="result"></p>
+<p id="hi"></p>
+
+<script>
+var numbers=[39,47,10,57,47,38,64,92,48,29]
+function myFunction(num){
+    return num + 19;
+}
+var newarray1=numbers.map(myFunction);
+document.getElementById("hi").innerHTML=newarray1;
+function ascending(){
+newarray1.sort(function(a,b) {return a-b});
+document.getElementById("result").innerHTML=newarray1;
+}
+function descending(){
+newarray1.sort(function(a,b) {return b-a});
+document.getElementById("result").innerHTML=newarray1;
+}
+</script>
+</body>
+</html>
